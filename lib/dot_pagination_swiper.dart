@@ -1,7 +1,5 @@
 library dot_pagination_swiper;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'src/color_dot.dart';
+export 'src/dot_pagination.dart';
+export 'src/dot_pagination_swiper.dart';
