@@ -1,0 +1,20 @@
+name: test
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - uses: subosito/flutter-action@v1
+      with:
+        flutter-version: '1.9.1+hotfix.6'
+    - name: install dependencies
+      run: flutter pub get
+    - name: analyze
+      run: flutter analyze
+    - name: test
+      run: flutter test
