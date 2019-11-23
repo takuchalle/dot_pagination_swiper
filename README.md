@@ -1,6 +1,6 @@
-# dot_pagination_swiper
+[![Actions Status](https://github.com/takuyaohashi/dot_pagination_swiper/workflows/test/badge.svg)](https://github.com/takuyaohashi/dot_pagination_swiper/actions)
 
-A simple swiper with dot pagination.
+# A simple swiper with dot pagination.
 
 ## Getting Started
 
