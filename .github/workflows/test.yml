@@ -1,4 +1,4 @@
-name: test
+name: Test
 
 on: [push]
 
@@ -9,9 +9,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - uses: subosito/flutter-action@v1
+    - uses: takuyaohashi/setup-flutter@v1
       with:
-        flutter-version: '1.9.1+hotfix.6'
+        flutter-version: 'latest'
     - name: install dependencies
       run: flutter pub get
     - name: analyze
