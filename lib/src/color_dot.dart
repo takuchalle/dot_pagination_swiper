@@ -13,7 +13,7 @@ class ColorDot extends StatelessWidget {
   Widget build(BuildContext context) {
     Color color = this.color ?? Colors.white;
     Color borderColor = this.borderColor ?? Theme.of(context).primaryColor;
-    double radius = this.radius ?? 5;
+    double radius = this.radius ?? 8;
 
     return Padding(
       padding: const EdgeInsets.all(1),
