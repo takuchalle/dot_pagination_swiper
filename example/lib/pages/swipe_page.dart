@@ -10,7 +10,7 @@ class SwipePage extends StatelessWidget {
       body: DotPaginationSwiper.builder(
         itemBuilder: (context, i) {
           return Center(
-            child: Text('unko'),
+            child: Text('page $i'),
           );
         },
         itemCount: 10,
