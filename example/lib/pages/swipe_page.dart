@@ -7,13 +7,13 @@ class SwipePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: DotPaginationSwiper(
-        children: <Widget>[
-          Center(child: Text('unko')),
-          Center(child: Text('unko')),
-          Center(child: Text('unko')),
-          Center(child: Text('unko')),
-        ],
+      body: DotPaginationSwiper.builder(
+        itemBuilder: (context, i) {
+          return Center(
+            child: Text('unko'),
+          );
+        },
+        itemCount: 10,
       ),
     );
   }
