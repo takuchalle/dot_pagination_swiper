@@ -17,7 +17,7 @@ jobs:
     - name: analyze
       run: flutter analyze
     - name: test
-      run: flutter test
+      run: flutter test --coverage
     - uses: codecov/codecov-action@v1
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
