@@ -4,25 +4,34 @@ import 'dot_pagination.dart';
 
 @immutable
 class DotPaginationSwiper extends StatefulWidget {
-  const DotPaginationSwiper({
+  DotPaginationSwiper({
     Key key,
-    @required this.children,
-  })  : assert(children != null),
+    List<Widget> children = const <Widget>[],
+  })  : childrenDelegate = SliverChildListDelegate(children),
+        itemCount = children.length,
         super(key: key);
 
-  final List<Widget> children;
+  DotPaginationSwiper.builder({
+    Key key,
+    @required IndexedWidgetBuilder itemBuilder,
+    int itemCount,
+  })  : childrenDelegate =
+            SliverChildBuilderDelegate(itemBuilder, childCount: itemCount),
+        itemCount = itemCount,
+        super(key: key);
+
+  final SliverChildDelegate childrenDelegate;
+  final int itemCount;
 
   @override
   _DotPaginationSwiperState createState() => _DotPaginationSwiperState();
 }
 
 class _DotPaginationSwiperState extends State<DotPaginationSwiper> {
-  int _itemCount;
   int _index;
 
   @override
   void initState() {
-    _itemCount = widget.children.length;
     _index = 0;
     super.initState();
   }
@@ -31,17 +40,16 @@ class _DotPaginationSwiperState extends State<DotPaginationSwiper> {
   Widget build(BuildContext context) {
     return Stack(
       children: <Widget>[
-        PageView(
-          children: widget.children,
-          onPageChanged: (i) {
-            setState(() {
-              _index = i;
-            });
-          },
-        ),
+        PageView.custom(
+            childrenDelegate: widget.childrenDelegate,
+            onPageChanged: (i) {
+              setState(() {
+                _index = i;
+              });
+            }),
         Align(
           child: DotPagination(
-            itemCount: _itemCount,
+            itemCount: widget.itemCount,
             activeIndex: _index,
           ),
           alignment: Alignment.bottomCenter,
