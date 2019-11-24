@@ -17,11 +17,9 @@ class DotPagination extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final inactiveDot = ColorDot(
-      color: Theme.of(context).unselectedWidgetColor,
-    );
+    final inactiveDot = ColorDot();
     final activeDot = ColorDot(
-      color: Theme.of(context).selectedRowColor,
+      color: Theme.of(context).primaryColor,
     );
 
     final list = List<ColorDot>.generate(
