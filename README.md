@@ -1,4 +1,5 @@
 [![Actions Status](https://github.com/takuyaohashi/dot_pagination_swiper/workflows/test/badge.svg)](https://github.com/takuyaohashi/dot_pagination_swiper/actions)
+[![codecov](https://codecov.io/gh/takuyaohashi/dot_pagination_swiper/branch/master/graph/badge.svg)](https://codecov.io/gh/takuyaohashi/dot_pagination_swiper)
 
 # A simple swiper with dot pagination.
 
