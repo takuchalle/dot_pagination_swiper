@@ -9,7 +9,35 @@
 To use this plugin, add `dot_pagination_swiper` as a [dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/).
 
 ## Example
+Use default constructor
+``` dart
+import 'package:dot_pagination_swiper/dot_pagination_swiper.dart';
+import 'package:flutter/material.dart';
 
+@immutable
+class SwipePage extends StatelessWidget {
+  const SwipePage({Key key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: DotPaginationSwiper(
+        onPageChanged: (i) {
+          print("index: $i");
+        },
+      children: <Widget>[
+        Center(child: Text('This')),
+        Center(child: Text('is')),
+        Center(child: Text('swipe')),
+        Center(child: Text('dialog')),
+      ],
+     ),
+   );
+  }
+}
+```
+
+
+Use builder constructor
 ``` dart
 import 'package:dot_pagination_swiper/dot_pagination_swiper.dart';
 import 'package:flutter/material.dart';
