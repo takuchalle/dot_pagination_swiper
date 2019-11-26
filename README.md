@@ -24,14 +24,14 @@ class SwipePage extends StatelessWidget {
         onPageChanged: (i) {
           print("index: $i");
         },
-      children: <Widget>[
-        Center(child: Text('This')),
-        Center(child: Text('is')),
-        Center(child: Text('swipe')),
-        Center(child: Text('dialog')),
-      ],
-     ),
-   );
+        children: <Widget>[
+          Center(child: Text('This')),
+          Center(child: Text('is')),
+          Center(child: Text('swipe')),
+          Center(child: Text('dialog')),
+        ],
+      ),
+    );
   }
 }
 ```
