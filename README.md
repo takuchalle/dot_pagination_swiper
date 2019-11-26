@@ -14,47 +14,50 @@ Use default constructor
 import 'package:dot_pagination_swiper/dot_pagination_swiper.dart';
 import 'package:flutter/material.dart';
 
+void main() => runApp(HomePage());
+
 @immutable
-class SwipePage extends StatelessWidget {
-  const SwipePage({Key key}) : super(key: key);
+class HomePage extends StatelessWidget {
+  const HomePage({Key key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: DotPaginationSwiper(
-        onPageChanged: (i) {
-          print("index: $i");
-        },
-        children: <Widget>[
-          Center(child: Text('This')),
-          Center(child: Text('is')),
-          Center(child: Text('swipe')),
-          Center(child: Text('dialog')),
-        ],
+    return MaterialApp(
+      home: Scaffold(
+        body: DotPaginationSwiper(
+          children: <Widget>[
+            Center(child: Text('Page 1')),
+            Center(child: Text('Page 2')),
+            Center(child: Text('Page 3')),
+            Center(child: Text('Page 4')),
+            Center(child: Text('Page 5')),
+          ],
+        ),
       ),
     );
   }
 }
 ```
 
-
 Use builder constructor
 ``` dart
 import 'package:dot_pagination_swiper/dot_pagination_swiper.dart';
 import 'package:flutter/material.dart';
 
+void main() => runApp(HomePage());
+
 @immutable
-class SwipePage extends StatelessWidget {
-  const SwipePage({Key key}) : super(key: key);
+class HomePage extends StatelessWidget {
+  const HomePage({Key key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: DotPaginationSwiper.builder(
-        itemBuilder: (context, i) {
-          return Center(
-            child: Text('page $i'),
-          );
-        },
-        itemCount: 10,
+    return MaterialApp(
+      home: Scaffold(
+        body: DotPaginationSwiper.builder(
+          itemCount: 6,
+          itemBuilder: (context, i) => Center(
+            child: Text('Page $i'),
+          ),
+        ),
       ),
     );
   }
