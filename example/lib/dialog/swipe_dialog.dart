@@ -12,6 +12,9 @@ class SwipeDialog extends StatelessWidget {
           height: 100,
           width: 100,
           child: DotPaginationSwiper(
+            onPageChanged: (i) {
+              print("index: $i");
+            },
             children: <Widget>[
               Center(child: Text('This')),
               Center(child: Text('is')),
