@@ -1,7 +1,7 @@
 name: dot_pagination_swiper
 description: A simple swiper with dot pagination.
-version: 0.0.1
-author: takuchalle <tky.ohashi@gmail.com>
+version: 0.1.0
+author: takuchalle.dev <tky.ohashi@gmail.com>
 homepage: https://github.com/takuyaohashi/dot_pagination_swiper
 
 environment:
