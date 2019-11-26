@@ -8,6 +8,8 @@
 ## Usage
 To use this plugin, add `dot_pagination_swiper` as a [dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/).
 
+![](https://github.com/takuyaohashi/dot_pagination_swiper/blob/master/image/dot_pagination_swiper.gif)
+
 ## Example
 Use default constructor
 ``` dart
