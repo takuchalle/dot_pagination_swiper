@@ -6,6 +6,7 @@ import 'dot_pagination.dart';
 class DotPaginationSwiper extends StatefulWidget {
   DotPaginationSwiper({
     Key key,
+    this.onPageChanged,
     List<Widget> children = const <Widget>[],
   })  : childrenDelegate = SliverChildListDelegate(children),
         itemCount = children.length,
@@ -13,6 +14,7 @@ class DotPaginationSwiper extends StatefulWidget {
 
   DotPaginationSwiper.builder({
     Key key,
+    this.onPageChanged,
     @required IndexedWidgetBuilder itemBuilder,
     int itemCount,
   })  : childrenDelegate =
@@ -22,6 +24,7 @@ class DotPaginationSwiper extends StatefulWidget {
 
   final SliverChildDelegate childrenDelegate;
   final int itemCount;
+  final ValueChanged<int> onPageChanged;
 
   @override
   _DotPaginationSwiperState createState() => _DotPaginationSwiperState();
@@ -45,6 +48,7 @@ class _DotPaginationSwiperState extends State<DotPaginationSwiper> {
             onPageChanged: (i) {
               setState(() {
                 _index = i;
+                widget.onPageChanged?.call(i);
               });
             }),
         Align(
