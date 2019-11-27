@@ -1,5 +1,6 @@
 # dot_pagination_swiper
 
+[![pub package](https://img.shields.io/pub/v/dot_pagination_swiper.svg)](https://pub.dartlang.org/packages/dot_pagination_swiper)
 [![Actions Status](https://github.com/takuyaohashi/dot_pagination_swiper/workflows/test/badge.svg)](https://github.com/takuyaohashi/dot_pagination_swiper/actions)
 [![codecov](https://codecov.io/gh/takuyaohashi/dot_pagination_swiper/branch/master/graph/badge.svg)](https://codecov.io/gh/takuyaohashi/dot_pagination_swiper)
 
