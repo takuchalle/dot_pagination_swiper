@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 @immutable
 class SwipePage extends StatelessWidget {
-  const SwipePage({Key key}) : super(key: key);
+  const SwipePage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

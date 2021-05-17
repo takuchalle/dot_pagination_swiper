@@ -5,10 +5,8 @@ import 'color_dot.dart';
 @immutable
 class DotPagination extends StatelessWidget {
   const DotPagination(
-      {Key key, @required this.itemCount, @required this.activeIndex})
-      : assert(itemCount != null),
-        assert(activeIndex != null),
-        assert(activeIndex >= 0),
+      {Key? key, required this.itemCount, required this.activeIndex})
+      : assert(activeIndex >= 0),
         assert(activeIndex < itemCount),
         super(key: key);
 
