@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 @immutable
 class ColorDot extends StatelessWidget {
-  const ColorDot({Key key, this.color, this.borderColor, this.radius})
+  const ColorDot({Key? key, this.color, this.borderColor, this.radius})
       : super(key: key);
 
-  final Color color;
-  final Color borderColor;
-  final double radius;
+  final Color? color;
+  final Color? borderColor;
+  final double? radius;
 
   @override
   Widget build(BuildContext context) {
